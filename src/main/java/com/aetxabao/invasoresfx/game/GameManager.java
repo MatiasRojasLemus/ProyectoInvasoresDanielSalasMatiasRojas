@@ -147,13 +147,15 @@ public class GameManager {
                                 break;
                             }
                         }
-                    }else if (sprite instanceof IHaveShield){
+                    }
+                    else if (sprite instanceof IHaveShield){
                         temps.add(new SpriteTemp(temps, sprite.getRect().centerX(), sprite.getRect().centerY(),
                                                  EXPLOSION_9_SPRITE_IMAGE, 9));
-//                        if (((EnemyBarrier) sprite).impact()){
-//                            itSprite.remove();
-//                        }
-                    }else{
+                        //if (((EnemyBarrier) sprite).impact()){
+                        //    itSprite.remove();
+                        //}
+                    }
+                    else{
                         temps.add(new SpriteTemp(temps, sprite.getRect().centerX(), sprite.getRect().centerY(),
                                                  EXPLOSION_9_SPRITE_IMAGE, 9));
                         itSprite.remove();
