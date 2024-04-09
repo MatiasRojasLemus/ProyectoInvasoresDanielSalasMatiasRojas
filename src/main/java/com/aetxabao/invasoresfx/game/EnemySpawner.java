@@ -95,6 +95,13 @@ public class EnemySpawner {
         return e;
     }
 
+    public static EnemyBarrier createEnemyBarrier(Image img, Rect gameRect, int x, int y, int vy) {
+        EnemyBarrier eb = new EnemyBarrier(gameRect, img, TICKSxFRAME);
+        eb.setPos(getX(gameRect, x), getY(gameRect, y));
+        eb.setYSpeed(vy);
+        return eb;
+    }
+
     public static List<AEnemy> crearEnemigosNivelDonut(Rect gameRect) {
         List<AEnemy> enemies = new ArrayList<>();
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 0, 0, vx, 0, E_SHOT_GUN));
@@ -145,17 +152,14 @@ public class EnemySpawner {
     public static List<AEnemy> crearEnemigosNivel4(Rect gameRect){
         //Codigo PlaceHolder para la funcion del nivel 4
         List<AEnemy> enemies = new ArrayList<>();
-        enemies.add(createEnemyShip(E_DIAGONAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 3, 0, -vx, vy, E_SHOT_NOTHING));
-        enemies.add(createEnemyShip(E_DIAGONAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 4, 0, vx, vy, E_SHOT_NOTHING));
-        enemies.add(createEnemyShip(E_DIAGONAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 0, 0, vx, vy, E_SHOT_NOTHING));
-        enemies.add(createEnemyShip(E_DIAGONAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 5, 0, -vx, vy, E_SHOT_NOTHING));
+        enemies.add(createEnemyBarrier(ENEMYBARRIER4_SPRITE_IMAGE, gameRect, 3, 4,-1));
         return enemies;
     }
 
     public static List<AEnemy> crearEnemigosNivel5(Rect gameRect){
         //Codigo PlaceHolder para la funcion del nivel 5
         List<AEnemy> enemies = new ArrayList<>();
-        enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 1, 1, vx, 0, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYBARRIER4_SPRITE_IMAGE, gameRect, 1, 1, vx, 0, E_SHOT_GUN));
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 6, 2, -vx, 0, E_SHOT_GUN));
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 2, 2, vx, 0, E_SHOT_GUN));
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 3, 3, -vx, 0, E_SHOT_GUN));

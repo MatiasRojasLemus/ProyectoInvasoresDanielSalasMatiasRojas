@@ -85,6 +85,15 @@ public final class AppConsts {
     public static final double ENEMYSHIP_ALFA = 0.75;
     //endregion
 
+
+    //region EnemyBarrier
+    public static final int ENEMYBARRIER_ROWS = 4;
+    public static final int ENEMYBARRIER_COLS = 1;
+
+    public static final double ENEMYBARRIER_ALFA = 0.75;
+
+
+
     //region Lifes
     public static final int LIFES_ROWS = 4;
     public static final int LIFES_COLS = 1;

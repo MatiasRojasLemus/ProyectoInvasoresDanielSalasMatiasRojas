@@ -10,9 +10,7 @@ import java.util.ArrayList;
  * Los enemigos van a poder disparar si tienen un arma
  */
 public abstract class AEnemy extends ASprite implements ICanShoot {
-
     AWeapon weapon;
-
     public AEnemy(Image img, int rows, int cols) {
         super(img, rows, cols);
     }
