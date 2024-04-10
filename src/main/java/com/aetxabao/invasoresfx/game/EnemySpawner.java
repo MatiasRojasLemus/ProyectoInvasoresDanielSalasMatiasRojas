@@ -154,8 +154,8 @@ public class EnemySpawner {
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 1, 0, vx, 0, E_SHOT_GUN));
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 0, 0, vx, 0, E_SHOT_GUN));
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 3, 0, vx, 0, E_SHOT_GUN));
-        enemies.add(createEnemyShip(E_TOWER, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 4, 0, vx, 0, E_SHOT_GUN));
-        enemies.add(createEnemyShip(E_TOWER, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 5, 0, vx, 0, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 4, 0, vx, 0, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 5, 0, vx, 0, E_SHOT_GUN));
 
 
         enemies.add(createEnemyShip(E_NORMAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 2, 1, -vx, 0, E_SHOT_GUN));
