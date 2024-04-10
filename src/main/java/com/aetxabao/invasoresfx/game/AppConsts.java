@@ -89,8 +89,8 @@ public final class AppConsts {
     //region EnemyBarrier
     public static final int ENEMYBARRIER_ROWS = 4;
     public static final int ENEMYBARRIER_COLS = 1;
-
     public static final double ENEMYBARRIER_ALFA = 0.75;
+    public static final int ENEMYBARRIER_MAX_SPEED = 1;
 
 
 

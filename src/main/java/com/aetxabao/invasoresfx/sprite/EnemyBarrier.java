@@ -18,11 +18,11 @@ public class EnemyBarrier extends AEnemy implements IHaveShield{
 
     public EnemyBarrier(Rect gameRect, Image img, int N) {
         super(img, ENEMYBARRIER_ROWS, ENEMYBARRIER_COLS);
-        ySpeed = ENEMYSHIP_MAX_SPEED;
         this.gameRect = gameRect;
+        y = gameRect.top+height/2;
         this.N = N;
-        n = 0;
-        defensas = 5;
+        this.n = 0;
+        defensas = 10;
     }
 
     public void updateFrame(){
@@ -32,19 +32,22 @@ public class EnemyBarrier extends AEnemy implements IHaveShield{
         }
     }
 
-    @Override
     public void update() {
-        y = y - height;
-        updateFrame();
+        y += 1;
     }
 
-    @Override
+
+    public Rect getRect(){
+        return new Rect(x, y, (int)(x + ENEMYBARRIER_ALFA * width),(int)(y + ENEMYBARRIER_ALFA * height));
+    }
+
     public void draw(GraphicsContext gc) {
-        int srcX = 0;
-        int srcY = currentFrame * height;
+        int srcX = currentFrame * width;
+        int srcY = side*height;
         Rect src = new Rect(srcX, srcY, srcX + width, srcY + height);
-        Rect dst = new Rect(x, y, (int)(x + ENEMYBARRIER_ALFA * width), (int)(y + ENEMYBARRIER_ALFA * height));
-        gc.drawImage(img, src.left, src.top, src.width(), src.height(), dst.left, dst.top, dst.width(), dst.height());
+        Rect dst = new Rect(x, y, x+width, y+height);
+        gc.drawImage(img, src.left, src.top, src.width(), src.height(),
+                dst.left, dst.top, dst.width(), dst.height());
     }
 
     @Override
