@@ -2,6 +2,7 @@ package com.aetxabao.invasoresfx.sprite.weaponry;
 
 import javafx.scene.image.Image;
 
+
 /**
  * Disparo descendente sin animación
  */

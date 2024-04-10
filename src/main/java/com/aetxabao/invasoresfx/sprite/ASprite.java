@@ -54,6 +54,10 @@ public abstract class ASprite {
         this.ySpeed = ySpeed;
     }
 
+    public int getX() {return x;}
+
+    public int getY() {return y;}
+
     public Rect getRect(){
         return new Rect(x,y,x+width,y+height);
     }
