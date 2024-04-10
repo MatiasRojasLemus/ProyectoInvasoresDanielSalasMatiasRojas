@@ -90,9 +90,12 @@ public final class AppConsts {
     public static final int ENEMYBARRIER_ROWS = 4;
     public static final int ENEMYBARRIER_COLS = 1;
     public static final double ENEMYBARRIER_ALFA = 0.75;
-    public static final int ENEMYBARRIER_MAX_SPEED = 1;
 
-
+    //region EnemyTower
+    public static final int ENEMYTOWER_ROWS = 3;
+    public static final int ENEMYTOWER_COLS = 1;
+    public static final int ENEMYTOWER_MAX_SPEED = 10;
+    public static final double ENEMYTOWER_ALFA = 0.75;
 
     //region Lifes
     public static final int LIFES_ROWS = 4;

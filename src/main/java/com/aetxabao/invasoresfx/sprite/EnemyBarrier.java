@@ -20,17 +20,9 @@ public class EnemyBarrier extends AEnemy implements IHaveShield{
         super(img, ENEMYBARRIER_ROWS, ENEMYBARRIER_COLS);
         this.gameRect = gameRect;
         y = gameRect.top+height/2;
-        this.N = N;
-        this.n = 0;
         defensas = 10;
     }
 
-    public void updateFrame(){
-        if (++n==N) {
-            n = 0;
-            currentFrame = ++currentFrame % rows;
-        }
-    }
 
     public void update() {
         y += 1;
